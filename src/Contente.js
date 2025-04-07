@@ -1,25 +1,25 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import "./Comtent.css"
 
-let cont = 0
 const Couter = ({titulo})=>{
- 
-const [contador, setContador] = useState(0)
+   const [contador, setContador] = useState(0)
+
+   useEffect(()=>{
+console.log('renderisou')
+   },[])
 
 function adicao(id){
  
     if(id == 0){
-        cont = cont + 1
-       const dados = cont
-        setContador(dados)
+        let cont = contador + 1
+       
+        setContador(cont)
     }
 
     if(id == 1){
-        cont = cont - 1
-       const dados = cont
-       if(dados <= 0 ) 
-        setContador(dados)
+        let cont = contador - 1
+        setContador(cont)
     }
     
 }
