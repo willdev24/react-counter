@@ -1,24 +1,31 @@
-import React from 'react';
+import React, {useState } from 'react';
 
-import Couter from './Contente';
+
+import Couter from './Contente'
+import Altest from './Albb';
 
 import './App.css';
 
 function App() {
 const [page, setPage] = useState()
 
-const handlechangePage =()=>{
+ const handlechangePage =()=>{
   setPage(page)}
 
 
- return(
-        <>
-          <button onClick={() => handlechangePage('albuns')}>álbum </button> // corrigir erro aq
-          <button onClick={() => handlechangePage('counter')}>counter</button>
+  const Page = page? <
 
+
+     return(
+      
+            <>
+            
+            <button onClick={ () => handlechangePage('impa')}> IMPA</button>
+            <button onClick={ () => handlechangePage('pá')}> PA</button>
+            
             <Couter titulo=" ola mundo" />
-          
-          </> 
+            <Altest/>
+            </>        
               )
   
 }
